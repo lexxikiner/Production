@@ -49,7 +49,7 @@ public class Controller implements Initializable
     try
     {
       AnchorPane anch3 = loader.load(getClass().getResource("Tab3.fxml"));
-      tab2.setContent(anch3);
+      tab3.setContent(anch3);
     }
     catch(IOException iex)
     {
