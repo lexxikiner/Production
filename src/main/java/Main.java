@@ -15,9 +15,9 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
     primaryStage.setTitle("TabPane Example");
-    primaryStage.setScene(new Scene(root, 300, 275));
-    Scene scene = new Scene(new Group(), 500, 400);
-    scene.getStylesheets().add("style.css");
+    Scene scene = new Scene(root, 800, 500);
+    scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+    primaryStage.setScene(scene);
     primaryStage.show();
   }
 
