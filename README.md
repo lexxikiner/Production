@@ -10,7 +10,7 @@ project in my dorm room while taking all of my classes online.
 
 
 ## Diagrams
-![Alt text](C:\Users\Lexxi\OneDrive - Florida Gulf Coast University\Desktop\FGCU Work\Fall 2020\Object Oriented Programming\productionDiagram.png) 
+![Alt text](relative/path/to/productionDiagram.png) 
 
 ## Getting Started
 
