@@ -1,2 +1,3 @@
 rootProject.name = 'Production'
+include 'productionProject'
 
