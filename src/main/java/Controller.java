@@ -59,6 +59,8 @@ public class Controller {
     for (int count = 1; count <= 10; count++) {
       itemType.getItems().add(String.valueOf(count));
     }
+    itemType.getSelectionModel().selectFirst();
+    // itemType.setEditable(true); -- compiler does not like this
   }
 
   /**
@@ -99,6 +101,7 @@ public class Controller {
 
       String prodName = productName.getText();
       String manufacturerText = manufacturer.getText();
+      System.out.println(prodName + " " + manufacturerText + " " + itemType);
 
       String sql = "INSERT INTO Product(type, manufacturer, name)"
           + "VALUES ( 'AUDIO', 'Apple', 'iPod' )";
@@ -112,11 +115,9 @@ public class Controller {
 
       // print out the 3 columns of the table
       while (rs.next()) {
-
         System.out.print(rs.getString(1) + " ");
         System.out.print(rs.getString(2) + " ");
         System.out.println(rs.getString(3));
-
       }
 
       // STEP 4: Clean-up environment
