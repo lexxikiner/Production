@@ -10,7 +10,7 @@ project in my dorm room while taking all of my classes online.
 
 
 ## Diagrams
-![Alt text](relative/path/to/productionDiagram.png) 
+![Production Diagram](relative/path/to/productionDiagram.png) 
 
 ## Getting Started
 
