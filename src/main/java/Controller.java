@@ -14,6 +14,7 @@ import java.sql.Statement;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -30,6 +31,9 @@ public class Controller {
 
   @FXML
   private ChoiceBox<String> itemType;
+
+  @FXML
+  private ComboBox<String> chooseQuantity;
 
   /**
    * @param mouseEvent - the program connects to the database once the button is pressed
@@ -57,10 +61,10 @@ public class Controller {
    */
   public void initialize() {
     for (int count = 1; count <= 10; count++) {
-      itemType.getItems().add(String.valueOf(count));
+      chooseQuantity.getItems().add(String.valueOf(count));
     }
-    itemType.getSelectionModel().selectFirst();
-    // itemType.setEditable(true); -- compiler does not like this
+    chooseQuantity.getSelectionModel().selectFirst();
+    chooseQuantity.setEditable(true);
   }
 
   /**
