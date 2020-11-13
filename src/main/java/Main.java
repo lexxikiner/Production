@@ -2,7 +2,7 @@
  * The main class for the Production Project
  *
  * @author Lexxi Kiner
- * @date 9/19/2020
+ * @date 11/10/2020
  */
 
 import javafx.application.Application;
@@ -22,12 +22,15 @@ public class Main extends Application {
    * @return void
    */
   public void start(Stage primaryStage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample.fxml"));
+    Parent root = loader.load();
+    Controller controller = loader.getController();
     primaryStage.setTitle("Lexxi Kiner - Production Project");
     Scene scene = new Scene(root);
     scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
+    primaryStage.setOnCloseRequest(e -> controller.disconnect());
   }
 
   /**
@@ -37,6 +40,19 @@ public class Main extends Application {
    * @return void
    */
   public static void main(String[] args) {
+
     launch(args);
+
+    Product productProduced = new Widget("iPod", "Apple", ItemType.AUDIO);
+
+    // test constructor used when creating production records from user interface
+    int numProduced = 3;  // this will come from the combobox in the UI
+    int itemCount = 0;
+
+    for (int productionRunProduct = 0; productionRunProduct < numProduced; productionRunProduct++) {
+      ProductionRecord pr = new ProductionRecord(productProduced, itemCount++);
+      // using the iterator as the product id for testing
+      System.out.println(pr.toString());
+    }
   }
 }

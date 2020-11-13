@@ -1,13 +1,12 @@
 public abstract class Product implements Item {
 
-  private int id;
-  private String type;
-  private String manufacturer;
-  private String name;
+  int id;
+  ItemType type;
+  String manufacturer;
+  String name;
 
 
-
-  Product(String name, String manufacturer, String type) {
+  Product(String name, String manufacturer, ItemType type) {
     this.name = name;
     this.manufacturer = manufacturer;
     this.type = type;
@@ -18,8 +17,20 @@ public abstract class Product implements Item {
         + type;
   }
 
+  public ItemType getType() {
+    return type;
+  }
+
+  public void setType(ItemType type) {
+    this.type = type;
+  }
+
   public int getId() {
     return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getManufacturer() {
@@ -39,4 +50,8 @@ public abstract class Product implements Item {
   }
 }
 
-class Widget {}
+class Widget extends Product{
+  Widget(String name, String manufacturer, ItemType type){
+    super(name, manufacturer, type);
+  }
+}

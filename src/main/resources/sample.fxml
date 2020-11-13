@@ -7,7 +7,6 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -38,20 +37,15 @@
                   </rowConstraints>
                   <children>
                     <Label text="Product Name" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                    <TextField fx:id="productName" prefHeight="0.0" prefWidth="124.0" GridPane.columnIndex="1" />
-                    <TextField fx:id="manufacturer" prefHeight="0.0" prefWidth="124.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="tfproductName" prefHeight="0.0" prefWidth="124.0" GridPane.columnIndex="1" />
+                    <TextField fx:id="tfmanufacturer" prefHeight="0.0" prefWidth="124.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     <Label text="Manufacturer" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                     <Label text=" Item Type" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                    <ChoiceBox fx:id="itemType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <ChoiceBox fx:id="cbItemType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   </children>
                 </GridPane>
                 <Label layoutX="401.0" layoutY="34.0" text="Existing Product" />
-                <TableView layoutX="344.0" layoutY="78.0" prefHeight="200.0" prefWidth="200.0">
-                  <columns>
-                    <TableColumn prefWidth="75.0" text="C1" />
-                    <TableColumn prefWidth="75.0" text="C2" />
-                  </columns>
-                </TableView>
+                <TableView fx:id="tvProductLine" layoutX="309.0" layoutY="85.0" prefHeight="200.0" prefWidth="285.0" />
               </children>
             </AnchorPane>
           </content>
@@ -60,7 +54,7 @@
           <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <ListView layoutX="33.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" />
+                <ListView fx:id="lvChooseProduct" layoutX="33.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" />
                 <Label layoutX="91.0" layoutY="47.0" text="Choose Product" />
                 <Label layoutX="384.0" layoutY="81.0" text="Choose Quantity" />
                 <ComboBox fx:id="chooseQuantity" layoutX="353.0" layoutY="172.0" prefWidth="150.0" />
@@ -73,7 +67,7 @@
           <content>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
               <children>
-                <TextArea layoutX="53.0" layoutY="57.0" prefHeight="258.0" prefWidth="493.0" />
+                <TextArea fx:id="taProductionLog" layoutX="53.0" layoutY="57.0" prefHeight="258.0" prefWidth="493.0" />
               </children>
             </AnchorPane>
           </content>
