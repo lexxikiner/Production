@@ -1,3 +1,10 @@
+/*
+  The class that is responsible for interacting with the production record database
+
+  @author Lexxi Kiner
+ * @date 12/11/2020
+ */
+
 import java.util.Date;
 
 public class ProductionRecord {
@@ -9,6 +16,11 @@ public class ProductionRecord {
   Product productProduced;
   int itemCount;
 
+  /**
+   * the constructor to set the values of audio players
+   *
+   * @param productID - of type integer and is the ID of the product
+   */
   ProductionRecord(int productID) {
     this.productID = productID;
     this.productionNumber = 0;
@@ -16,13 +28,27 @@ public class ProductionRecord {
     this.dateProduced = new Date();
   }
 
+  /**
+   * the constructor to set the values of audio players
+   *
+   * @param productProduced - of type Product and contains the information of the product created
+   * @param itemCount       - of type integer and is the number of items produced
+   */
   ProductionRecord(Product productProduced, int itemCount) {
-    String extendedCount = String.format("%05d",itemCount);
-    serialNumber = productProduced.manufacturer.substring(0,3) +
-        productProduced.type.toString().substring(0,2) + extendedCount;
+    String extendedCount = String.format("%05d", itemCount);
+    serialNumber = productProduced.manufacturer.substring(0, 3) +
+        productProduced.type.toString().substring(0, 2) + extendedCount;
     this.dateProduced = new Date();
   }
 
+  /**
+   * the constructor to set the values of audio players
+   *
+   * @param productionNumber - of type integer and is the the production set number
+   * @param productID        - of type integer and is the ID of the product
+   * @param serialNumber     - of type String and is the specific number for the product
+   * @param dateProduced     - of type Date and sets the day and time of the product produced
+   */
   ProductionRecord(int productionNumber, int productID, String serialNumber, Date dateProduced) {
     this.productionNumber = productionNumber;
     this.productID = productID;
@@ -30,12 +56,23 @@ public class ProductionRecord {
     this.dateProduced = dateProduced;
   }
 
+  /**
+   * an override of the toString method, which displays the production record information
+   *
+   * @return void
+   */
+  @Override
   public String toString() {
     return "Prod. Num: " + productionNumber + " Product ID: " + productID + " Serial Num: "
         + serialNumber + " Date: " + dateProduced;
   }
 
+  /*****************************************************
+   * Getters and Setters
+   ****************************************************/
+  @SuppressWarnings("ConstantConditions")
   public void setProductionNum(int productionNum) {
+    //noinspection SillyAssignment
     this.productionNumber = productionNumber;
   }
 
@@ -59,12 +96,22 @@ public class ProductionRecord {
     return serialNumber;
   }
 
+  @SuppressWarnings("SillyAssignment")
   public void setDateProduced(Date date) {
+    //noinspection ConstantConditions
     this.dateProduced = dateProduced;
   }
 
   public Date getDateProduced() {
     return dateProduced;
+  }
+
+  public int getProductionNumber() {
+    return productionNumber;
+  }
+
+  public void setProductionNumber(int productionNumber) {
+    this.productionNumber = productionNumber;
   }
 
 }

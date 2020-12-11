@@ -1,10 +1,10 @@
-/**
- * The main class for the Production Project
- *
- * @author Lexxi Kiner
- * @date 11/10/2020
- */
+/*
+  The main class for the Production Project
+  This renders the GUI and runs the program.
 
+  @author Lexxi Kiner
+ * @date 12/11/2020
+ */
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,14 +13,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-
-  @Override
-  /**
-   * this is where the sample.fxml and style.css are used to create the visual of the tabs and
-   * tab pane window
-   * @param primaryStage - creates the window
+  /*
+    this is where the sample.fxml and style.css are used to create the visual of the tabs and
+    tab pane window
+    @param primaryStage - creates the window
    * @return void
    */
+  @Override
   public void start(Stage primaryStage) throws Exception {
     FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample.fxml"));
     Parent root = loader.load();
@@ -36,23 +35,7 @@ public class Main extends Application {
   /**
    * the main class of the Production Project
    *
-   * @param args
-   * @return void
+   * @param args - array of string arguments
    */
-  public static void main(String[] args) {
-
-    launch(args);
-
-    Product productProduced = new Widget("iPod", "Apple", ItemType.AUDIO);
-
-    // test constructor used when creating production records from user interface
-    int numProduced = 3;  // this will come from the combobox in the UI
-    int itemCount = 0;
-
-    for (int productionRunProduct = 0; productionRunProduct < numProduced; productionRunProduct++) {
-      ProductionRecord pr = new ProductionRecord(productProduced, itemCount++);
-      // using the iterator as the product id for testing
-      System.out.println(pr.toString());
-    }
-  }
+  public static void main(String[] args) { launch(args); }
 }

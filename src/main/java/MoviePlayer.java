@@ -1,14 +1,31 @@
+/**
+ * The class that captures the details of a movie player
+ *
+ * @author Lexxi Kiner
+ * @date 12/11/2020
+ */
 public class MoviePlayer extends Product implements MultimediaControl {
 
   Screen screen;
   MonitorType monitorType;
 
+  /**
+   * the constructor to set the values of audio players
+   *
+   * @param name         - of type String name of the product
+   * @param manufacturer - of type String manufacturer of the product
+   * @param screen       - of type Screen and pulls in all the values of a screen
+   * @param monitorType  - of type MonitorType and pulls in all the values of monitor
+   */
   public MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
     super(name, manufacturer, ItemType.VISUAL);
     this.screen = screen;
     this.monitorType = monitorType;
   }
 
+  /*****************************************************
+   * Getters and Setters
+   ****************************************************/
   public Screen getScreen() {
     return screen;
   }
@@ -42,14 +59,12 @@ public class MoviePlayer extends Product implements MultimediaControl {
   }
 
 
+  /**
+   * toString method that prints the attributes of a movie player
+   */
   public String toString() {
-    return "Name: " + name +
-        "\nManufacturer: " + manufacturer +
-        "\nType: " + type +
-        "\nScreen:" +
-        "\nResolution: " + screen.resolution +
-        "\nRefresh rate: " + screen.refreshRate +
-        "\nResponse time: " + screen.responseTime +
-        "\nMonitor Type: " + monitorType;
+    return super.toString() + "\nScreen:" + "\nResolution: " + screen.resolution
+        + "\nRefresh rate: " + screen.refreshRate + "\nResponse time: " + screen.responseTime
+        + "\nMonitor Type: " + monitorType;
   }
 }

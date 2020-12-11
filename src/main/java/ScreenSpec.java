@@ -1,8 +1,17 @@
+/**
+ * Defines methods that will get the screen specifications
+ *
+ * @author Lexxi Kiner
+ * @date 12/11/2020
+ */
 public interface ScreenSpec {
 
-  public String getResolution();
+  /*****************************************************
+   * Getters
+   ****************************************************/
+  String getResolution();
 
-  public int getRefreshRate();
+  int getRefreshRate();
 
-  public int getResponseTime();
+  int getResponseTime();
 }

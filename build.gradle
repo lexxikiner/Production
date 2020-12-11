@@ -9,6 +9,7 @@ plugins {
 }
 
 
+//noinspection GroovyUnusedAssignment
 sourceCompatibility = 11
 
 
@@ -21,6 +22,7 @@ javafx {
 }
 
 
+//noinspection GroovyUnusedAssignment
 mainClassName = 'Main'
 
 
