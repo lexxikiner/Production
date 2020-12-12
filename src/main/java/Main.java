@@ -24,7 +24,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample.fxml"));
     Parent root = loader.load();
-    Controller controller = loader.getController();
+    final Controller controller = loader.getController();
     primaryStage.setTitle("Lexxi Kiner - Production Project");
     Scene scene = new Scene(root);
     scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
@@ -34,7 +34,7 @@ public class Main extends Application {
   }
 
   /**
-   * the main class of the Production Project
+   * the main class of the Production Project.
    *
    * @param args - array of string arguments
    */

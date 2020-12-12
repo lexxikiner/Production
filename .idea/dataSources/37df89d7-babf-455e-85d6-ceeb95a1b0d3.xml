@@ -172,62 +172,43 @@
     <collation id="160" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="161" parent="2" name="VIETNAMESE"/>
     <collation id="162" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="163" parent="4" name="SYSTEM_SEQUENCE_53349BC4_4335_43D9_A7C5_1EBD4A93BF17">
+    <sequence id="163" parent="4" name="SYSTEM_SEQUENCE_0EB8DF1D_8F45_4E83_BD2F_2300A83D10D0">
       <ObjectId>9</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_A8857D51_942F_460B_BA85_80000E1F4346">
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_F7E7B65C_88C9_49F2_A3FD_BBBD079B436C">
       <ObjectId>4</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <table id="165" parent="4" name="EMPLOYEE">
-      <ObjectId>10</ObjectId>
-    </table>
-    <table id="166" parent="4" name="PRODUCT">
+    <table id="165" parent="4" name="PRODUCT">
       <ObjectId>3</ObjectId>
     </table>
-    <table id="167" parent="4" name="PRODUCTIONRECORD">
+    <table id="166" parent="4" name="PRODUCTIONRECORD">
       <ObjectId>8</ObjectId>
     </table>
-    <column id="168" parent="165" name="NAME">
-      <Position>1</Position>
-      <DataType>INT|0s</DataType>
-    </column>
-    <column id="169" parent="165" name="PASSWORD">
-      <Position>2</Position>
-      <DataType>INT|0s</DataType>
-    </column>
-    <column id="170" parent="165" name="USERNAME">
-      <Position>3</Position>
-      <DataType>INT|0s</DataType>
-    </column>
-    <column id="171" parent="165" name="EMAIL">
-      <Position>4</Position>
-      <DataType>INT|0s</DataType>
-    </column>
-    <column id="172" parent="166" name="ID">
+    <column id="167" parent="165" name="ID">
       <Position>1</Position>
       <DataType>INT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="173" parent="166" name="NAME">
+    <column id="168" parent="165" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="174" parent="166" name="TYPE">
+    <column id="169" parent="165" name="TYPE">
       <Position>3</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="175" parent="166" name="MANUFACTURER">
+    <column id="170" parent="165" name="MANUFACTURER">
       <Position>4</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <index id="176" parent="166" name="PRIMARY_KEY_1">
+    <index id="171" parent="165" name="PRIMARY_KEY_1">
       <ObjectId>6</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>71</SourceTextLength>
@@ -235,31 +216,31 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="177" parent="166" name="PRODUCT_ID_UINDEX">
+    <index id="172" parent="165" name="PRODUCT_ID_UINDEX">
       <ObjectId>5</ObjectId>
       <SourceTextLength>76</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="178" parent="166" name="PRODUCT_PK">
+    <key id="173" parent="165" name="PRODUCT_PK">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="179" parent="167" name="PRODUCTION_NUM">
+    <column id="174" parent="166" name="PRODUCTION_NUM">
       <Position>1</Position>
       <DataType>INT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="180" parent="167" name="PRODUCT_ID">
+    <column id="175" parent="166" name="PRODUCT_ID">
       <Position>2</Position>
       <DataType>INT|0s</DataType>
     </column>
-    <column id="181" parent="167" name="SERIAL_NUM">
+    <column id="176" parent="166" name="SERIAL_NUM">
       <Position>3</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="182" parent="167" name="DATE_PRODUCED">
+    <column id="177" parent="166" name="DATE_PRODUCED">
       <Position>4</Position>
       <DataType>DATETIME|0s</DataType>
     </column>

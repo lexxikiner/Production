@@ -28,7 +28,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
-@SuppressWarnings("ALL")
+@SuppressWarnings("unused")
 public class Controller {
 
   // all FXML attributes
@@ -316,7 +316,7 @@ public class Controller {
 
         // add to the list and list view
         products.add(finalProduct);
-        lvChooseProduct.getItems().add(finalProduct.getName());
+        lvChooseProduct.getItems().add(finalProduct.toString());
       }
 
       stmt.close();
@@ -352,9 +352,6 @@ public class Controller {
         id = rs2.getInt("ID");
         String type = rs2.getString("TYPE").substring(0, 2);
 
-        //productionRun.add(productionRecord);
-        //taProductionLog.appendText(productionRecord.toString() + "\n");
-
         int numProduced = Integer.valueOf(chooseQuantity.getValue());
         ProductionRecord pr = new ProductionRecord(productList.get(id), 0);
         for (int productionRunProduct = 0; productionRunProduct < numProduced;
@@ -368,8 +365,6 @@ public class Controller {
             pr = new ProductionRecord(productList.get(id), VIitemCount);
             taProductionLog.appendText(pr.toString() + "\n");
           }
-
-          // System.out.println(pr.toString());
         }
       }
 
