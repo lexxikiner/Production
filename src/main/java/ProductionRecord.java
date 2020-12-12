@@ -7,14 +7,13 @@
 
 import java.util.Date;
 
+@SuppressWarnings({"ALL", "unused"})
 public class ProductionRecord {
 
   int productionNumber;
   int productID;
   String serialNumber;
   Date dateProduced;
-  Product productProduced;
-  int itemCount;
 
   /**
    * the constructor to set the values of audio players
@@ -70,9 +69,7 @@ public class ProductionRecord {
   /*****************************************************
    * Getters and Setters
    ****************************************************/
-  @SuppressWarnings("ConstantConditions")
-  public void setProductionNum(int productionNum) {
-    //noinspection SillyAssignment
+  public void setProductionNum(int productionNumber) {
     this.productionNumber = productionNumber;
   }
 
@@ -96,22 +93,14 @@ public class ProductionRecord {
     return serialNumber;
   }
 
-  @SuppressWarnings("SillyAssignment")
-  public void setDateProduced(Date date) {
+  @SuppressWarnings({"SillyAssignment", "unused"})
+  public void setDateProduced() {
     //noinspection ConstantConditions
     this.dateProduced = dateProduced;
   }
 
   public Date getDateProduced() {
     return dateProduced;
-  }
-
-  public int getProductionNumber() {
-    return productionNumber;
-  }
-
-  public void setProductionNumber(int productionNumber) {
-    this.productionNumber = productionNumber;
   }
 
 }

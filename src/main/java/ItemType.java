@@ -19,6 +19,7 @@ public enum ItemType {
     this.code = code;
   }
 
+  @SuppressWarnings("unused")
   private String code() {
     return code;
   }

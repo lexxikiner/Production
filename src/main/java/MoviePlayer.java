@@ -4,6 +4,7 @@
  * @author Lexxi Kiner
  * @date 12/11/2020
  */
+@SuppressWarnings("unused")
 public class MoviePlayer extends Product implements MultimediaControl {
 
   Screen screen;

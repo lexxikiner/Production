@@ -1,17 +1,15 @@
-/**
- * Captures all of the information of the employee
- *
- * @author Lexxi Kiner
+/*
+  Captures all of the information of the employee
+
+  @author Lexxi Kiner
  * @date 12/11/2020
  */
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Employee {
 
   String name;
   String username;
-  String password;
+  final String password;
   String email;
 
   /**
