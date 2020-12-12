@@ -8,6 +8,7 @@ by the facility. Workers can log in to the system and get a username and passwor
 
 ## Documentation
 [JavaDocs Reference](https://lexxikiner.github.io/Production/index.html)
+[JavaDocs](allclasses.html)
 
 ## Diagrams
 ![Production Diagram](productionDiagram.png) 
