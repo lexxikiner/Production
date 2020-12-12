@@ -7,8 +7,8 @@
 @SuppressWarnings("ALL")
 public class AudioPlayer extends Product implements MultimediaControl {
 
-  final String supportedAudioFormats;
-  final String supportedPlaylistFormats;
+  String supportedAudioFormats;
+  String supportedPlaylistFormats;
 
   /**
    * the constructor to set the values of audio players
@@ -42,32 +42,24 @@ public class AudioPlayer extends Product implements MultimediaControl {
     System.out.println("Next");
   }
 
-// --Commented out by Inspection START (12/11/2020 1:31 PM):
-//  /*****************************************************
-//   * Getters and Setters
-//   ****************************************************/
-//  public String getsupportedAudioFormats() {
-//    return supportedAudioFormats;
-//  }
-// --Commented out by Inspection STOP (12/11/2020 1:31 PM)
+  /*****************************************************
+   * Getters and Setters
+   ****************************************************/
+  public String getsupportedAudioFormats() {
+    return supportedAudioFormats;
+  }
 
-// --Commented out by Inspection START (12/11/2020 1:31 PM):
-//  public void setsupportedAudioFormats(String supportedAudioFormats) {
-//    this.supportedAudioFormats = supportedAudioFormats;
-//  }
-// --Commented out by Inspection STOP (12/11/2020 1:31 PM)
+  public void setsupportedAudioFormats(String supportedAudioFormats) {
+    this.supportedAudioFormats = supportedAudioFormats;
+  }
 
-// --Commented out by Inspection START (12/11/2020 1:31 PM):
-//  public String getsupportedPlaylistFormats() {
-//    return supportedPlaylistFormats;
-//  }
-// --Commented out by Inspection STOP (12/11/2020 1:31 PM)
+  public String getsupportedPlaylistFormats() {
+    return supportedPlaylistFormats;
+  }
 
-// --Commented out by Inspection START (12/11/2020 1:31 PM):
-//  public void setsupportedPlaylistFormats(String supportedPlaylistFormats) {
-//    this.supportedPlaylistFormats = supportedPlaylistFormats;
-//  }
-// --Commented out by Inspection STOP (12/11/2020 1:31 PM)
+  public void setsupportedPlaylistFormats(String supportedPlaylistFormats) {
+    this.supportedPlaylistFormats = supportedPlaylistFormats;
+  }
 
   /**
    * toString method that calls the super class method and prints the extra attributes of an audio

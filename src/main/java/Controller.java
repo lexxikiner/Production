@@ -31,6 +31,7 @@ import javafx.scene.input.MouseEvent;
 @SuppressWarnings("ALL")
 public class Controller {
 
+  // all FXML attributes
   @FXML
   private Button addProduct;
 
@@ -58,7 +59,20 @@ public class Controller {
   @FXML
   private TextArea taProductionLog;
 
+  @FXML
+  private TextField tfName;
+
+  @FXML
+  private TextField tfPassword;
+
+  @FXML
+  private TextArea taEmployeeInfo;
+
+  @FXML
+  private Button employeeButton;
+
   int id;
+  Connection conn;
 
   // observable list of all products produced
   private final ObservableList<Product> products = FXCollections.observableArrayList();
@@ -69,6 +83,8 @@ public class Controller {
   int VIitemCount = 0;
 
   /**
+   * adds a product to a database
+   *
    * @return void
    */
   @FXML
@@ -117,6 +133,7 @@ public class Controller {
     connectToDB();
     loadProductList();
     loadProductionLog();
+    //addEmployee();
 
     // populate the combo box
     for (int count = 1; count <= 10; count++) {
@@ -364,6 +381,8 @@ public class Controller {
   }
 
   /**
+   * gets the information from the produce tab
+   *
    * @param mouseEvent - the program prints to the console once the recordProduction is clicked
    * @return void
    */
@@ -384,6 +403,12 @@ public class Controller {
     showProduction();
   }
 
+  /**
+   * add to the productionRecord database
+   *
+   * @param productionRun - brings an array list of the recorded products
+   * @return void
+   */
   private void addToProductionDB(ArrayList<ProductionRecord> productionRun) {
     try {
       // SQL to insert a product into the DB
@@ -413,8 +438,14 @@ public class Controller {
     }
   }
 
-  private Connection conn;
-
+  /**
+   * inputs the missing informaiton from the product
+   *
+   * @param name         - the name of the product
+   * @param manufacturer - the manufacturer of the product
+   * @param type         - the type of the product
+   * @return void
+   */
   public Product finalProduct(String name, String manufacturer, ItemType type) {
     Product product = null;
     if (type == ItemType.AUDIO || type == ItemType.AUDIO_MOBILE) {
@@ -430,11 +461,70 @@ public class Controller {
     return product;
   }
 
+  /**
+   * shows the product info on the production log
+   */
   public void showProduction() {
     taProductionLog.clear();
     for (ProductionRecord products : productionRun) {
       taProductionLog.appendText(products.toString() + "\n");
     }
+  }
+
+  /**
+   * if there is a password, it reverses it
+   *
+   * @param password - the employee password
+   * @return String - the new reversed password
+   */
+  public String reverseString(String password) {
+    if (password.isEmpty()) {
+      return password;
+    } else {
+      return reverseString(password.substring(1)) + password.charAt(0);
+    }
+  }
+
+  /**
+   * adds all the information of the employee and creates the passwords
+   */
+  public void addEmployee() {
+    // Get data from UI fields
+    String name = tfName.getText();
+    String username;
+    String password = tfPassword.getText();
+    String email;
+    String encryptedPass;
+
+    Employee employee = new Employee(name, password);
+    username = employee.username;
+    email = employee.email;
+    encryptedPass = reverseString(password);
+
+    // try-catch block to avoid errors while inserting into the database
+    try {
+      // SQL to insert a product into the DB
+      String sql = "INSERT INTO Employee(NAME, PASSWORD, USERNAME, EMAIL) VALUES ( ?, ?, ?, ?)";
+
+      // Create a prepared statement from connection and set values to UI field values
+      PreparedStatement ps = conn.prepareStatement(sql);
+      // This is the only way to remove the FindBugs magic number bug
+      final int nameIndex = 1;
+      final int passwordIndex = 2;
+      final int usernameIndex = 3;
+      final int emailIndex = 4;
+      ps.setString(nameIndex, name);
+      ps.setString(passwordIndex, encryptedPass);
+      ps.setString(usernameIndex, username);
+      ps.setString(emailIndex, email);
+
+      // Execute and close the statement
+      ps.execute();
+      ps.close();
+    } catch (SQLException ex) {
+      ex.printStackTrace();
+    }
+    taEmployeeInfo.appendText(employee.toString());
   }
 
 }

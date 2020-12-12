@@ -5,6 +5,7 @@
   @author Lexxi Kiner
  * @date 12/11/2020
  */
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,5 +38,7 @@ public class Main extends Application {
    *
    * @param args - array of string arguments
    */
-  public static void main(String[] args) { launch(args); }
+  public static void main(String[] args) {
+    launch(args);
+  }
 }
