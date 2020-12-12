@@ -2,7 +2,6 @@
   Captures all of the information of the employee
 
   @author Lexxi Kiner
- * @date 12/11/2020
  */
 
 public class Employee {

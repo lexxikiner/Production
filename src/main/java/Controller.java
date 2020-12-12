@@ -1,9 +1,8 @@
-/*
-  The controller class for all three tabs, which include: Product Line, Produce, and Production
-  Line
-
-  @author Lexxi Kiner
- * @date 12/11/2020
+/**
+ * The controller class for all three tabs, which include: Product Line, Produce, and Production
+ * Line
+ *
+ * @author Lexxi Kiner
  */
 
 import java.sql.Connection;
@@ -85,7 +84,6 @@ public class Controller {
   /**
    * adds a product to a database
    *
-   * @return void
    */
   @FXML
   public void addProduct() {
@@ -123,8 +121,6 @@ public class Controller {
   /**
    * in charge of running all info for the GUI and databases
    *
-   * @param - none
-   * @return void
    */
   public void initialize() {
 
@@ -154,8 +150,6 @@ public class Controller {
   /**
    * allows the user to interact with the database
    *
-   * @param - none
-   * @return void
    */
   public void connectToDB() {
     final String JDBC_DRIVER = "org.h2.Driver";
@@ -199,8 +193,6 @@ public class Controller {
   /**
    * disconnects the user from the database when they are finished
    *
-   * @param - none
-   * @return void
    */
   public void disconnect() {
     try {
@@ -218,7 +210,6 @@ public class Controller {
     tests the Movie Player and associated classes
 
     @param - none
-   * @return void
    */
   /* public static void testMultimedia() {
 
@@ -258,8 +249,6 @@ public class Controller {
   /**
    * creates and sets up the table on the production line tab
    *
-   * @param - none
-   * @return void
    */
   public void setupProductLineTable() {
 
@@ -289,8 +278,6 @@ public class Controller {
    * read from the Product database, create an object, add them to the productLine ObservableList,
    * which auto populates the Product Line List View
    *
-   * @param - none
-   * @return void
    */
   public void loadProductList() {
     // clear the list and list view from previous runs
@@ -329,8 +316,6 @@ public class Controller {
   /**
    * Set up the information to make the production log visual
    *
-   * @param - none
-   * @return void
    */
   public void loadProductionLog() {
     taProductionLog.clear();
@@ -379,7 +364,6 @@ public class Controller {
    * gets the information from the produce tab
    *
    * @param mouseEvent - the program prints to the console once the recordProduction is clicked
-   * @return void
    */
   @FXML
   public void recordProduction(MouseEvent mouseEvent) {
@@ -402,7 +386,6 @@ public class Controller {
    * add to the productionRecord database
    *
    * @param productionRun - brings an array list of the recorded products
-   * @return void
    */
   private void addToProductionDB(ArrayList<ProductionRecord> productionRun) {
     try {
@@ -439,7 +422,6 @@ public class Controller {
    * @param name         - the name of the product
    * @param manufacturer - the manufacturer of the product
    * @param type         - the type of the product
-   * @return void
    */
   public Product finalProduct(String name, String manufacturer, ItemType type) {
     Product product = null;

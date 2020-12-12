@@ -3,7 +3,6 @@
   This renders the GUI and runs the program.
 
   @author Lexxi Kiner
- * @date 12/11/2020
  */
 
 import javafx.application.Application;
@@ -18,7 +17,6 @@ public class Main extends Application {
     this is where the sample.fxml and style.css are used to create the visual of the tabs and
     tab pane window
     @param primaryStage - creates the window
-   * @return void
    */
   @Override
   public void start(Stage primaryStage) throws Exception {

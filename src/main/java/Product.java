@@ -2,7 +2,6 @@
  * The super class for all products produced by the company
  *
  * @author Lexxi Kiner
- * @date 12/11/2020
  */
 @SuppressWarnings("unused")
 public abstract class Product implements Item {

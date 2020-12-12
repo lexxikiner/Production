@@ -2,7 +2,6 @@
  * The class that captures the details of an audio player
  *
  * @author Lexxi Kiner
- * @date 12/11/2020
  */
 @SuppressWarnings("ALL")
 public class AudioPlayer extends Product implements MultimediaControl {
@@ -17,7 +16,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
    * @param manufacturer             - of type String manufacturer of the product
    * @param supportedAudioFormats    - of type String and identifies the audio types supported
    * @param supportedPlaylistFormats - of type String and identifies the playlist types supported
-   * @return void
    */
   public AudioPlayer(String name, String manufacturer, String supportedAudioFormats,
       String supportedPlaylistFormats) {
@@ -65,7 +63,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
    * toString method that calls the super class method and prints the extra attributes of an audio
    * player
    *
-   * @return void
    */
   public String toString() {
     return super.toString() + "\n" + "Supported Audio Formats: " + supportedAudioFormats + "\n"

@@ -2,7 +2,6 @@
   The class that is responsible for interacting with the production record database
 
   @author Lexxi Kiner
- * @date 12/11/2020
  */
 
 import java.util.Date;
@@ -58,7 +57,6 @@ public class ProductionRecord {
   /**
    * an override of the toString method, which displays the production record information
    *
-   * @return void
    */
   @Override
   public String toString() {

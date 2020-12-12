@@ -2,7 +2,6 @@
  * List of methods to be used by the products with media
  *
  * @author Lexxi Kiner
- * @date 12/11/2020
  */
 @SuppressWarnings("unused")
 public interface MultimediaControl {

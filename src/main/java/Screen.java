@@ -2,7 +2,6 @@
  * Class that gathers all of the information needed for the screen
  *
  * @author Lexxi Kiner
- * @date 12/11/2020
  */
 @SuppressWarnings("unused")
 public class Screen {
@@ -24,18 +23,27 @@ public class Screen {
     this.responseTime = responseTime;
   }
 
-
   /*****************************************************
    * Getters and Setters
    ****************************************************/
+
+  /**
+   * @return String - returns the resolution
+   */
   String getResolution() {
     return resolution;
   }
 
+  /**
+   * @return int - returns the refresh rate
+   */
   int getRefreshRate() {
     return refreshRate;
   }
 
+  /**
+   * @return int - returns the response time
+   */
   int getResponseTime() {
     return responseTime;
   }
