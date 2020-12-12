@@ -26,7 +26,7 @@ You contribute to this project by furthering the developing the program the empl
 Lexxi Kiner
 
 ## License
-
+![LICENSE](LICENSE.txt) 
 
 ## Acknowledgments
 I used Professor Vanselow as a resource along with our Teaching Assistants when I needed help. 
