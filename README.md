@@ -4,14 +4,14 @@ the process by allowing the workers to input the items, and the software stores 
 by the facility. Workers can log in to the system and get a username and password. I made this project independently in my Object Oriented Programming class in the Fall 2020 semester at Florida Gulf Coast University. Previous to working on this project, I had a little work with Java and Object-Oriented Programming. During the creation of this project, I learned more about the language and the style of programming. I did this project because it was our assigned semester long project. I created this project in my dorm room while taking all of my classes online. The project shows my growth and development with Object-Oriented Program because we were given freedom with different aspects of the development of the program.
 
 ## Demonstration
-![Production](C:\Users\Lexxi\OneDrive - Florida Gulf Coast University\Desktop\FGCU Work\Fall 2020\Object Oriented Programming/production.gif) 
+![Production](production.gif) 
 
 ## Documentation
 Add a link to the javadoc/doxygen index.html file with this markdown: [Text to appear](URL)
 The URL will be YourGitHubUserName.github.io/YourRepositoryName/foldername/filename
 
 ## Diagrams
-![Production Diagram](C:\Users\Lexxi\OneDrive - Florida Gulf Coast University\Desktop\FGCU Work\Fall 2020\Object Oriented ProgrammingproductionDiagram.png) 
+![Production Diagram](productionDiagram.png) 
 
 ## Getting Started
 In order to get the project running, download all the files. Run the program through the main class. The graphical user interface will appear allowing you to interact with the product databases and employee attributes.
