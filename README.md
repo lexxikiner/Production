@@ -7,8 +7,7 @@ by the facility. Workers can log in to the system and get a username and passwor
 ![Production](production.gif) 
 
 ## Documentation
-Add a link to the javadoc/doxygen index.html file with this markdown: [Text to appear](URL)
-The URL will be YourGitHubUserName.github.io/YourRepositoryName/foldername/filename
+[JavaDocs Reference](lexxikiner.github.io/Production/allclasses.html)
 
 ## Diagrams
 ![Production Diagram](productionDiagram.png) 
